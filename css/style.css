@@ -1,3 +1,7 @@
+*{
+  
+}
+
 body {
  
   background: #ffffff;
@@ -5,7 +9,7 @@ body {
   /*背景填滿無邊界*/
   overflow: hidden;
   /*讓物件跑出背景時不會出現捲軸*/
-  
+  /*cursor:crosshair;*/
 }
 
 /*------------定位------------*/
@@ -45,7 +49,7 @@ body {
   width: 90%;
   height: 20px;
   bottom: 160px;
-  border-radius:0px 10px 10px 0px;
+  border-radius:0px 20px 80px 0px;
 }
 
 
@@ -411,15 +415,89 @@ body {
   }
 }
 
-/*.title{
-  display:flex;
-  width:100%;
-  height:350px;
-  top:0;
-  justify-content:center;
-  align-items:center;
-  background-image:url("https://i.imgur.com/QAeV3cW.png");
-}*/
+/*------------水滴------------*/
+
+/*水滴*/
+.raindrop {
+  background: #E2F6F6;
+  border-radius: 100%;
+  box-shadow: 0 0 0 0.2em #E2F6F6, 0 0 0 0.2em #E2F6F6, 0 0 0 0.2em #E2F6F6, 0 0 0 0.2em #E2F6F6, 0 0 0 0.2em #E2F6F6, 0 0 0 0.2em #E2F6F6, 0 0 0 0.2em #E2F6F6, 0 0 0 0.2em #E2F6F6, 0 0 0 0.2em #E2F6F6, 0 0 0 0.2em #E2F6F6;
+  position: absolute;
+  top: 75%;
+  right: 11%;
+  margin-top: 0;
+  margin-left: -0.1em;
+  width: 0.2em;
+  height: 0.2em;
+  animation: drop 5s cubic-bezier(0, 0, 1, 0.5) infinite;
+}
+
+@keyframes drop {
+  3% {
+    box-shadow: 0.1em -0.1em 0 0.05em #E2F6F6, 0.1em -0.2em 0 0.05263158em #E2F6F6, 0.1em 0.3em 0 0.05555556em #E2F6F6, 0.1em 0.4em 0 0.08333333em #E2F6F6, 0.1em 0.5em 0 0.09090909em #E2F6F6, 0.1em 0.6em 0 0.1em #E2F6F6, 0.1em 0.7em 0 0.11111111em #E2F6F6, 0.1em 0.8em 0 0.125em #E2F6F6, 0.1em 0.9em 0 0.14285714em #E2F6F6, 0.1em 1em 0 0.16666667em #E2F6F6;
+  }
+  15% {
+    top: 98%;
+    box-shadow: 0.1em 0.1em 0 0.10526316em #ffffff, 0.1em 0.2em 0 0.11111111em #ffffff, 0.1em 0.3em 0 0.11764706em #ffffff, 0.1em 0.4em 0 0.125em #ffffff, 0.1em 0.5em 0 0.13333333em #ffffff, 0.1em 0.6em 0 0.14285714em #ffffff, 0.1em 0.7em 0 0.15384615em #ffffff, 0.1em 0.8em 0 0.16666667em #ffffff, 0.1em 0.9em 0 0.18181818em #ffffff, 0.1em 1em 0 0.2em #ffffff;
+  }
+  25% {
+    top: 98%;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: -0.1em 0.1em 0 0.06666667em rgba(255, 255, 255, 0.1), -2em -0.21em 0 0.1em rgba(255, 255, 255, 0.1), 2em -1.5em 0 0.04em rgba(255, 255, 255, 0.1), 2.5em -2em 0 0.2em rgba(255, 255, 255, 0.1), 8em -8em 0 0.01em rgba(255, 255, 255, 0.1), 2.5em -3em 0 0.04em rgba(255, 255, 255, 0.1), 3em -0.26em 0 0.03333333em rgba(255, 255, 255, 0.1), -5em -5em 0 0.03333333em rgba(255, 255, 255, 0.1), 5em -3.5em 0 0.1em rgba(255, 255, 255, 0.1), 0.1em -3em 0 0.2em rgba(255, 255, 255, 0.1);
+  }
+  35% {
+    top: 98%;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: -0.4em 0.4em 0 0.06666667em rgba(255, 255, 255, 0.1), -8em 0.4em 0 0.1em rgba(255, 255, 255, 0.1), 8em 0.4em 0 0.04em rgba(255, 255, 255, 0.1), 10em 0.4em 0 0.2em rgba(255, 255, 255, 0.1), 32em 0.4em 0 0.01em rgba(255, 255, 255, 0.1), 12em 0.4em 0 0.04em rgba(255, 255, 255, 0.1), 12em 0.4em 0 0.03333333em rgba(255, 255, 255, 0.1), -20em 0.4em 0 0.03333333em rgba(255, 255, 255, 0.1), 20em 0.4em 0 0.1em rgba(255, 255, 255, 0.1), 0.4em 0.4em 0 0.2em rgba(255, 255, 255, 0.1);
+  }
+  40% {
+    top: 98%;
+    background: rgba(0, 0, 0, 0);
+    box-shadow: -0.1em 0.1em 0 0.06666667em rgba(0, 0, 0, 0), -2em 0.1em 0 0.1em rgba(0, 0, 0, 0), 2em 0.1em 0 0.04em rgba(0, 0, 0, 0), 2.5em 0.1em 0 0.2em rgba(0, 0, 0, 0), 8em 0.1em 0 0.01em rgba(0, 0, 0, 0), 3em 0.1em 0 0.04em rgba(0, 0, 0, 0), 3em 0.1em 0 0.03333333em rgba(0, 0, 0, 0), -5em 0.1em 0 0.03333333em rgba(0, 0, 0, 0), 5em 0.1em 0 0.1em rgba(0, 0, 0, 0), 0.1em 0.1em 0 0.2em rgba(0, 0, 0, 0);
+  }
+  100% {
+    top: 98%;
+    background: rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+/*------------標題------------*/
+
+.title1{
+  position:absolute;
+  bottom:12%;
+  left:10%;
+  font-size:36px;
+  font-weight:600;
+  font-family: 'Roboto Condensed', sans-serif;
+  color:#348E8D;
+}
+
+.title1:hover{
+  color:#666666;
+  transform:translatey(2px);
+}
+
+.title2{
+  position:absolute;
+  bottom:12%;
+  left:40%;
+  font-size:36px;
+  font-weight:600;
+  font-family: 'Roboto Condensed', sans-serif;
+  color:#348E8D;
+}
+
+.title3{
+  position:absolute;
+  bottom:12%;
+  left:40%;
+  font-size:36px;
+  font-weight:600;
+  font-family: 'Roboto Condensed', sans-serif;
+  color:#ffffff;
+}
 
 
 
